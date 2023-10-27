@@ -128,17 +128,17 @@ public class ObjReader {
 			String[] wordIndices = wordInLine.split("/");
 			switch (wordIndices.length) {
 				case 1 -> {
-					onePolygonVertexIndices.add(Integer.parseInt(wordIndices[0]) - 1);
+					onePolygonVertexIndices.add(Integer.parseInt(wordIndices[0]));
 				}
 				case 2 -> {
-					onePolygonVertexIndices.add(Integer.parseInt(wordIndices[0]) - 1);
-					onePolygonTextureVertexIndices.add(Integer.parseInt(wordIndices[1]) - 1);
+					onePolygonVertexIndices.add(Integer.parseInt(wordIndices[0]));
+					onePolygonTextureVertexIndices.add(Integer.parseInt(wordIndices[1]));
 				}
 				case 3 -> {
-					onePolygonVertexIndices.add(Integer.parseInt(wordIndices[0]) - 1);
-					onePolygonNormalIndices.add(Integer.parseInt(wordIndices[2]) - 1);
+					onePolygonVertexIndices.add(Integer.parseInt(wordIndices[0]));
+					onePolygonNormalIndices.add(Integer.parseInt(wordIndices[2]));
 					if (!wordIndices[1].equals("")) {
-						onePolygonTextureVertexIndices.add(Integer.parseInt(wordIndices[1]) - 1);
+						onePolygonTextureVertexIndices.add(Integer.parseInt(wordIndices[1]));
 					}
 				}
 				default -> {
