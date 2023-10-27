@@ -24,6 +24,10 @@ public class Main {
         System.out.println("Polygons: " + model.polygons.size());
 
         System.out.println("Trying write to new file...");
-        ObjWriter.write(model, "test.obj");
+        if (ObjWriter.write(model, "testWriter.obj")) {
+            System.out.println("File was written successfully!");
+        } else {
+            System.out.println("File wasn't written!");
+        }
     }
 }

@@ -12,16 +12,11 @@ import java.util.List;
 
 public class ObjWriter {
 
-    public static void write(Model model, String path) throws IOException {
-        File file = new File(path);
-        if (file.createNewFile())
-            System.out.println("File created");
-        else
-            System.out.println("File already exists");
+    public static boolean write(Model model, String path) throws IOException {
         if (writeInfo(model, path)) {
-            System.out.println("File was written successfully!");
+            return true;
         } else {
-            System.out.println("File wasn't written!");
+            return false;
         }
     }
 
