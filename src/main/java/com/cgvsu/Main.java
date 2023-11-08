@@ -13,6 +13,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Path fileName = Path.of("Faceform/WrapHand.obj");
+        //Path fileName = Path.of("SimpleModelsForReaderTests/Test04.obj");
         String fileContent = Files.readString(fileName);
 
         System.out.println("Loading model ...");
@@ -23,7 +24,7 @@ public class Main {
         System.out.println("Normals: " + model.normals.size());
         System.out.println("Polygons: " + model.polygons.size());
 
-        System.out.println("Trying write to new file...");
+        System.out.println("Trying write model to new file...");
         if (ObjWriter.write(model, "testWriter.obj")) {
             System.out.println("File was written successfully!");
         } else {
