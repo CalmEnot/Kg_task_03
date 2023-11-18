@@ -22,6 +22,7 @@ public class ObjWriter {
      * @return Возвращает boolean значение. true - удалось записать в файл, false - не удалось
      */
     public static boolean write(Model model, String path) {
+
         // Формирование строки
         String output = makeOutputString(model.vertices, model.textureVertices, model.normals, model.polygons);
         // Попытка записи в файл
@@ -43,8 +44,8 @@ public class ObjWriter {
      * @param polygons - полигон модели
      * @return - сформированная строка
      */
-    protected static String makeOutputString(final ArrayList<Vector3f> vertices, final ArrayList<Vector2f> textureVertices,
-             final ArrayList<Vector3f> normals, final ArrayList<Polygon> polygons) {
+    protected static String makeOutputString(final List<Vector3f> vertices, final List<Vector2f> textureVertices,
+             final List<Vector3f> normals, final List<Polygon> polygons) {
         StringBuilder output = new StringBuilder();
         // Проверки на пустоту полей модели
         if (vertices.size() > 0) {
