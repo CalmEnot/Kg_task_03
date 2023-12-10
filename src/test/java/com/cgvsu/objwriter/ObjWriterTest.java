@@ -2,16 +2,10 @@ package com.cgvsu.objwriter;
 
 import com.cgvsu.math.Vector2f;
 import com.cgvsu.math.Vector3f;
-import com.cgvsu.model.Model;
 import com.cgvsu.model.Polygon;
-import com.cgvsu.objreader.ObjReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -80,7 +74,7 @@ class ObjWriterTest {
         input.add(p3);
         input.add(p4);
         String output = ObjWriter.outputPolygons(input);
-        Assertions.assertTrue(output.equals("f 3 5 6\nf 3/3 5/5 6/6\n" +
-                "f 3//3 5//5 6//6\nf 3/3/3 5/5/5 6/6/6\n"));
+        Assertions.assertTrue(output.equals("f 4 6 7\nf 4/4 6/6 7/7\n" +
+                "f 4//4 6//6 7//7\nf 4/4/4 6/6/6 7/7/7\n"));
     }
 }
