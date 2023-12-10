@@ -141,22 +141,22 @@ public class ObjWriter {
         if (textureVertexIndices.size() == 0) {
             if (normalIndices.size() == 0) {
                 for (int i = 0; i < size; i++) {
-                    output.append(" ").append(vertexIndices.get(i));
+                    output.append(" ").append(vertexIndices.get(i) + 1);
                 }
             } else {
                 for (int i = 0; i < size; i++) {
-                    output.append(" ").append(vertexIndices.get(i)).append("//").append(normalIndices.get(i));
+                    output.append(" ").append(vertexIndices.get(i) + 1).append("//").append(normalIndices.get(i) + 1);
                 }
             }
         } else {
             if (normalIndices.size() == 0) {
                 for (int i = 0; i < size; i++) {
-                    output.append(" ").append(vertexIndices.get(i)).append("/").append(textureVertexIndices.get(i));
+                    output.append(" ").append(vertexIndices.get(i) + 1).append("/").append(textureVertexIndices.get(i) + 1);
                 }
             } else {
                 for (int i = 0; i < size; i++) {
-                    output.append(" ").append(vertexIndices.get(i)).append("/").append(textureVertexIndices.get(i))
-                            .append("/").append(normalIndices.get(i));
+                    output.append(" ").append(vertexIndices.get(i) + 1).append("/").append(textureVertexIndices.get(i) + 1)
+                            .append("/").append(normalIndices.get(i) + 1);
                 }
             }
         }
